@@ -131,3 +131,7 @@ This method demonstrates how a host application manually maps the DLL and resolv
 
 ## Referrence
 - https://infosecwriteups.com/dll-search-order-hijacking-finding-and-exploiting-the-flaw-9f5dabaa2470
+- https://medium.com/@R3dLevy/evading-windows-security-a-list-of-applocker-bypass-techniques-with-lolbas-2f0568a59ffd
+- https://www.r-tec.net/r-tec-blog-dll-sideloading.html
+- https://redcanary.com/threat-detection-report/techniques/rundll32/
+- https://cloud.google.com/blog/topics/threat-intelligence/abusing-dll-misconfigurations
