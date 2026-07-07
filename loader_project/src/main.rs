@@ -7,7 +7,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     if args.len() < 2 {
 		println!("*******************");
-		println!("* RustDoLL Loader *");
+		println!("* rustdoll Loader *");
 		println!("*******************");
         println!("Usage: loader.exe <module_name>");
         return;
