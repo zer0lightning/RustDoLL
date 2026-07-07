@@ -11,10 +11,24 @@ This project provides a sandbox for understanding:
 * **Standalone Testing:** How the Windows loader treats a DLL as a modular, self-executing component.
 * **Process Context:** How injected code inherits the permissions and environment of the host process.
 
-## Project Structure
+## Project Source Structure
 
-* `/dll_project`: The core library containing payload modules and a universal `ExecuteCommand` entry point.
-* `/loader_project`: A lightweight test harness that simulates an application performing a "sideload" of `RustDoLL.dll`.
+The project utilizes a Rust workspace to maintain strict separation between the payload library and the test harness:
+
+```text
+RustDoLL/
+├── Cargo.toml              # Workspace configuration
+├── README.md               # Project documentation
+├── dll_project/            # Core library (The Payload)
+│   ├── Cargo.toml          # DLL-specific dependencies
+│   └── src/
+│       └── lib.rs          # Export definitions (ExecuteCommand, Calc, etc.)
+└── loader_project/         # Test harness (The Host)
+    ├── Cargo.toml          # Loader-specific dependencies
+    └── src/
+        └── main.rs         # Logic to LoadLibrary and execute exports
+
+```
 
 ## Build Instructions
 
@@ -40,7 +54,7 @@ cargo build --release
 
 ### Method 1: Standalone Testing (`rundll32`)
 
-You can test the functionality of `RustDoLL.dll` as a standalone unit without needing custom code. This uses the native Windows `rundll32.exe` utility.
+You can test the functionality of `RustDoLL.dll` as a standalone unit using the native Windows `rundll32.exe` utility.
 
 ```cmd
 rundll32.exe dll_project\target\release\RustDoLL.dll,<function_name>
