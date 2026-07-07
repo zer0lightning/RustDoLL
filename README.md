@@ -33,22 +33,37 @@ RustDoLL/
 ## Build Instructions
 
 1. **Clone the repository.**
-2. **Build the DLL:**
+2. **Option 1: Build the DLL and Loader:**
 ```bash
-cd dll_project
+cd RustDoLL
 cargo build --release
 
 ```
+Output
+```
+C:\Users\Builder\RustDoLL>cargo build --release
+   Compiling loader v0.1.0 (C:\Users\Builder\RustDoLL\loader_project)
+   Compiling rustdoll v0.1.0 (C:\Users\Builder\RustDoLL\dll_project)
+    Finished `release` profile [optimized] target(s) in 1.36s
+```
 
-
-3. **Build the Loader:**
+3. **Option 2: Build the Loader or DLL Only:**
 ```bash
 cd ../loader_project
 cargo build --release
 
 ```
 
+```bash
+cd ../dll_project
+cargo build --release
 
+```
+
+**Loader and DLL Compiled Location**
+```
+C:\Users\Builder\RustDoLL\target\release
+```
 
 ## Usage
 
@@ -87,3 +102,6 @@ This method demonstrates how a host application manually maps the DLL and resolv
 ## Disclaimer
 
 *This project is intended for educational and security research purposes only. Use only on systems you own or have explicit authorization to test. The unauthorized loading of DLLs into processes can be flagged by security software as malicious behavior.*
+
+## Referrence
+- https://infosecwriteups.com/dll-search-order-hijacking-finding-and-exploiting-the-flaw-9f5dabaa2470
