@@ -12,6 +12,7 @@ This project provides a sandbox for understanding:
 * **Export Table Resolution:** How host applications locate and execute functions inside a loaded DLL.
 * **Standalone Testing:** How the Windows loader treats a DLL as a modular, self-executing component.
 * **Process Context:** How injected code inherits the permissions and environment of the host process.
+* **No Evasion/Obfuscation:** It doesn't have these features, this is purely for testing.
 
 ## Project Source Structure
 
