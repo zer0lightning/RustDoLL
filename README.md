@@ -99,12 +99,16 @@ rundll32.exe dll_project\target\release\RustDoLL.dll,<function_name>
 
 *Example:* `rundll32.exe RustDoLL.dll,Popup`
 
+![RustDoLL RunDLL32-SideLoad](assets/RunDLL32-SideLoad-Calc.png)
+
 ### Method 2: Simulated Sideloading (`loader`)
 
 This method demonstrates how a host application manually maps the DLL and resolves the `ExecuteCommand` entry point to pass dynamic instructions.
 
 * **Run:** `loader.exe <module_name>`
 * **Example:** `loader.exe Calc`
+
+![Loader-SideLoad](assets/Loader-Calc.png)
 
 ## Payload Modules Reference
 
