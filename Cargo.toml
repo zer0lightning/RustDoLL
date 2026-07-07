@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "dll_project",
+    "loader_project",
+]
+resolver = "2"
