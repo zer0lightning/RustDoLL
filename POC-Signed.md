@@ -35,3 +35,7 @@ Rename-Item -Path "document.pdf.exe" -NewName $newName
 
 ## Reference
 - https://www.elastic.co/security-labs/Hunting-for-Suspicious-Windows-Libraries-for-Execution-and-Evasion
+
+## Disclaimer
+
+*This project is intended for educational and security research purposes only. Use only on systems you own or have explicit authorization to test. The unauthorized loading of DLLs into processes can be flagged by security software as malicious behavior.*
