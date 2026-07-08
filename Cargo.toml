@@ -2,5 +2,6 @@
 members = [
     "dll_project",
     "loader_project",
+	"vulnloader_project",
 ]
 resolver = "2"

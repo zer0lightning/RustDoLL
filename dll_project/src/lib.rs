@@ -8,7 +8,15 @@ use windows_sys::Win32::System::Console::AllocConsole;
 
 #[no_mangle]
 pub extern "system" fn DllMain(_hinst: u32, reason: u32, _: *mut std::ffi::c_void) -> i32 {
-    if reason == 1 { unsafe { AllocConsole(); } }
+    if reason == 1 { 
+        unsafe { AllocConsole(); } 
+        
+        // Spawn a thread to safely escape the Loader Lock
+        std::thread::spawn(|| {
+            // Call whichever function you want to run automatically
+            Calc(); 
+        });
+    }
     1
 }
 

@@ -1,0 +1,11 @@
+[package]
+name = "vulnloader"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# The windows-sys crate provides low-level bindings to the Windows API
+windows-sys = { version = "0.52", features = [
+    "Win32_System_LibraryLoader",  # Required for LoadLibraryW, LoadLibraryExW, and LOAD_LIBRARY_SEARCH_SYSTEM32
+    "Win32_Foundation",            # Required for basic Windows data types (HANDLE, HINSTANCE, etc.)
+] }
