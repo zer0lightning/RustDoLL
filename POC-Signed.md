@@ -6,7 +6,7 @@ This execution sequence is a highly calculated stack of defense-evasion tactics.
 
 When combined, they form a highly effective initial access pipeline.
 
-1. **Delivery:** The user downloads or receives an VHD file or (or VHD in Pass Protected ZIP).
+1. **Delivery:** The user downloads or receives an VHD file or (VHD in Pass Protected ZIP).
 2. **First Mount:** The user double-clicks the VHD, mounting it as a second virtual hard drive. Inside are the actual execution files.
 3. **Second Mount:** The user double-clicks the ISO, mounting it as a virtual disc drive. Inside is a hidden or visible VHD (Virtual Hard Disk) file.
 4. **Masquerading Techniques**
